@@ -14,10 +14,10 @@ Parameters:
     AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})" # IP Address
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
     Default: 0.0.0.0/0
-  TheSubnetId:
+  SubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Choose subnet to launch the server in
-  TheVpcId:
+  VpcId:
     Type: AWS::EC2::VPC::Id
   ImageId:
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
@@ -29,7 +29,7 @@ Resources:
     Properties:
       ImageId: !Ref ImageId
       InstanceType: !Ref InstanceType # Nothing is hardcoded
-      SubnetId: !Ref TheSubnetId
+      SubnetId: !Ref SubnetId
       KeyName: !Ref KeyName
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
@@ -55,13 +55,12 @@ Resources:
           FromPort: '22'
           IpProtocol: tcp
           ToPort: '22'
-      VpcId: !Ref TheVpcId
+      VpcId: !Ref VpcId
 
 Outputs:
   InstanceId:
     Description: InstanceId of the newly created EC2 instance
-    Value: !GetAtt WebServer.PublicIp # return the ip addr
-# Outputs:
-#   NelieParamOutput:
-#     Description: whatever
-#     Value: !Sub '${NelieParameter} is living on the west coast'
+    Value: !GetAtt WebServer.PublicIp 
+  DnsName:
+    Description: DNS name of the newly created EC2 instance
+    Value: !GetAtt WebServer.PublicDnsName
