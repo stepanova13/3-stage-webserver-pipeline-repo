@@ -8,7 +8,7 @@ Building three-stage pipeline to deploy web application with CloudFormation temp
 
 Used cfn-lint tool to test the template on the build stage.
 
-- DIAGRAMS:
+# DIAGRAMS:
 
 Variant 1: Source stage - AWS CodeCommit
 ![](images/diagram.drawio.png)
