@@ -1,8 +1,8 @@
 # 3-stage-webserver-pipeline-repo
 
-CI/CD pipeline for multi-region deployment with AWS CodePipeline
+CI/CD pipeline for multi-region (us-east-1/N.Virginia and us-west-1/N.California) deployment with AWS CodePipeline
 
-Build a three-stage pipeline to deploy a CloudFormation template.
+Building three-stage pipeline to deploy web application with CloudFormation template.
 - Variant 1: Using AWS CodeCommit and AWS CodePipeline.
 - Variant 2: Using GitHub and AWS CodePipeline.
 
