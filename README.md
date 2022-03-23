@@ -11,7 +11,7 @@ Used cfn-lint tool to test the template on the build stage.
 - DIAGRAMS:
 
 Source stage - AWS CodeCommit
-![](diagram.drawio.png)
+![](images/diagram.drawio.png)
 
 Source stage - GitHub
-![](diagram-1.drawio.png)
+![](images/diagram-1.drawio.png)
