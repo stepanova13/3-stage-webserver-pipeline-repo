@@ -8,4 +8,5 @@ Build a three-stage pipeline to deploy a CloudFormation template.
 
 Used cfn-lint tool to test the template on the build stage.
 
+DIAGRAM:
 ![](Diagram.drawio.png)
