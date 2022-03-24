@@ -28,4 +28,4 @@ phases:
 artifacts:
   files: 
     - outputTemplate.yaml  # zipped in our build articaft
-    - webserver-template.yaml 
+    - webserver-template.yaml
