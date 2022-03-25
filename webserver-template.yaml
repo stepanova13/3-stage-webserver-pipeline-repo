@@ -64,3 +64,4 @@ Outputs:
   DnsName:
     Description: DNS name of the newly created EC2 instance
     Value: !GetAtt WebServer.PublicDnsName
+    
